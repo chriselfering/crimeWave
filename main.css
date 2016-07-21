@@ -1,0 +1,56 @@
+body {
+    background-color:#72A1E8;
+}
+
+
+#logo {
+    height:40px;
+    position:relative;
+    bottom:10px;
+    padding-right:25px;
+
+    display:inline-block;
+}
+
+#map {
+    background-color:black;
+    min-height:700px;
+    border:1px solid gray;
+    border-radius:3px;
+
+
+
+
+}
+
+
+
+
+#chartAPI{
+    background-color:white;
+    min-height:700px;
+    border:1px solid gray;
+    border-radius:3px;
+
+}
+
+
+
+#sidebar {
+    background-color:white;
+    min-height:700px;
+    border:1px solid gray;
+    border-radius:3px;
+    padding:10px;
+}
+
+.siderow {
+    height:100px;
+    padding-top:30px;
+}
+
+
+.upperLeftChart {
+    width:100%;
+    height:100%;
+}

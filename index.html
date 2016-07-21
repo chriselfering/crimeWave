@@ -1,0 +1,206 @@
+<html ng-app = "crimeWave">
+    <head>
+         <title> Crime Map </title>
+
+
+                                    <!--jquery-->
+                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+            <!--CSS bootstrap & main.css-->
+
+            <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+                        <link rel = "stylesheet" href = "main.css">
+
+                        <!--bootstrapJS-->
+            <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+
+            <!--angularJS-->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+
+            <!-- cdn to chart.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
+
+
+                <script type="text/javascript" src="main.js"></script>
+
+
+    </head>
+
+    <body onload="onLoad()" ng-controller ="crrime as crime" >
+
+        <div class = "container" >
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">
+                                <img alt="Brand" src="https://www.iconexperience.com/_img/i_collection_png/512x512/plain/criminal.png" id = "logo"> Crime Wave
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+
+            <div class = "row">
+                <div class="row">
+
+                    <div class="col-lg-6 col-lg-offset-1">
+                        <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div><!-- /btn-group -->
+
+
+
+                    <input type="text" class="form-control" aria-label="...">
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div>
+
+            <div class = "row">
+               <hr>
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class = "row">
+                <div class = "col-lg-9" >
+
+
+                      <!--------------------map  ng-show = "data"----------------------->
+                    <!--ng-show here-->
+                        <div id="map" >
+
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ZWnvDR9dV4eOz14jyJL5c1azx8vTmts&callback=initMap"
+                            async defer></script>
+                        </div>
+
+
+
+
+
+
+
+                            <!--------------------graphs ng-show = "!data" ----------------------->
+
+                                        <!--ng-show here-->
+
+                        <div  id = "chartAPI"  >
+
+                            <div class="upperLeftChart">
+                                <canvas id="myLineChart">
+
+                                </canvas>
+
+                            </div>
+
+
+
+                        </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--------------------side bar----------------------->
+
+
+
+
+
+
+
+                <div class = "col-lg-2 col-lg-offset-1" id = "sidebar">
+                    <div class = "row siderow">
+                        <div class = "col-lg-10 col-lg-offset-2">
+                           From
+                           <input type = "text">
+                           To
+                           <input type = "text" >
+
+                        </div>
+
+                    </div>
+                   <hr>
+
+
+
+                    <div class = "row siderow">
+                        <div class = "col-lg-10 col-lg-offset-2">
+
+                            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Single toggle
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <hr>
+                         <div class = "row siderow">
+                        <div class = "col-lg-10 col-lg-offset-2">
+
+                            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Single toggle
+                            </button>
+
+                        </div>
+
+                    </div>
+                   <hr>
+
+
+                         <div class = "row siderow">
+                        <div class = "col-lg-10 col-lg-offset-2">
+
+                            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Single toggle
+                            </button>
+
+                        </div>
+
+                    </div>
+                   <hr>
+
+
+
+                    <div class = "row siderow">
+                    <div class = "col-lg-10 col-lg-offset-2">
+
+                            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Single toggle
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </body>
+
+
+</html>
